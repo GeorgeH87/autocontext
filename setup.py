@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='autocontext',
-    version=os.getenv("github.ref"),
+    version=os.getenv("GITHUB_REF"),
     author='George Haddad',
     description='a library to inject context related dependencies',
     long_description_content_type='text/markdown',
