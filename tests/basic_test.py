@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from autocontext import Context, Auto
+from autocontext import Context, auto
 
 
 class TestContextD(Context[str]):
@@ -17,9 +17,9 @@ class TestContextA(Context):
 class TestContextB(Context):
     
     # a variable
-    text: str = Auto(TestContextD, "super")
+    text: str = auto(TestContextD, "super")
     
-    text: TestContextA = Auto(TestContextA)
+    text: TestContextA = auto(TestContextA)
 
 
 class BasicTest(TestCase):
@@ -42,12 +42,5 @@ class BasicTest(TestCase):
         g = TestContextD.instance("wann")
         self.assertEqual(f, g)
 
-        auto = Auto(
+        field = auto(
             TestContextA, "root")
-
-        
-
-        
-
-        
-        

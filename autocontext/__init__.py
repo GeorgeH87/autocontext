@@ -1,1 +1,2 @@
-from .context import Context, Auto
+from .context import Context
+from .auto import auto
